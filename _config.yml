@@ -10,12 +10,12 @@ url: https://isvplaybook.github.io/isvplaybook/
 nav_enabled: true
 heading_anchors: true
 
-collections:
-  docs:
-    permalink: "/:collection/:path/"
-    output: true
+# collections:
+#   docs:
+#     permalink: "/:collection/:path/"
+#     output: true
 
-just_the_docs:
-  collections:
-    docs:
-      name: Partner Onboarding
+# just_the_docs:
+#   collections:
+#     docs:
+#       name: Partner Onboarding
