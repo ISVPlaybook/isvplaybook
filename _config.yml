@@ -10,12 +10,37 @@ url: https://isvplaybook.github.io/isvplaybook/
 nav_enabled: true
 heading_anchors: true
 
-# collections:
-#   docs:
-#     permalink: "/:collection/:path/"
-#     output: true
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
 
-# just_the_docs:
-#   collections:
-#     docs:
-#       name: Partner Onboarding
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
+enable_copy_code_button: true
+
+permalink: pretty
+
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    docs:
+
