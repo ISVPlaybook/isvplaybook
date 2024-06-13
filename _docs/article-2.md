@@ -2,7 +2,7 @@
 layout: default
 title: Article 2
 nav_order: 2
-Parent: Partner Onboarding
+parent: Partner Onboarding
 ---
 
 Some text here 2
