@@ -3,7 +3,7 @@ layout: default
 title: Partner Onboarding
 nav_order: 1
 has_children: true
-permalink: /docs
+permalink: /docs/partner-onboarding
 ---
 
 # Partner Onboarding Overview
