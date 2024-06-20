@@ -78,12 +78,12 @@ Headings are rendered like this:
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page]({{site.baseurl}}/).
+[Link to another page](https://isvplaybook.github.io/isvplaybook/).
 
 
 ```
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page]({{site.baseurl}}/).
+[Link to another page](https://isvplaybook.github.io/isvplaybook/).
 
 ```
