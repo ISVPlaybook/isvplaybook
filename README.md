@@ -50,8 +50,6 @@ Following is the guidance to help you contribute to the ISV Playbook:
         ```
         [Link button](https://just-the-docs.com){: .btn }
         ```
-    - To add a button with a specific color, use the following syntax:
-        ```
 
 ## Headings
 
