@@ -1,174 +1,134 @@
-# just-the-docs-template
+# ISV Playbook on GitHub Pages
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+This repository contains the source code for the ISV Playbook on GitHub Pages. The ISV Playbook is a guide for ISV partners to help them onboard to the Microsoft Partner Network (MPN) and build a successful business with help of the Microsoft ISV Team.
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+The repository is built using Just the Docs theme powered by [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages.
 
-More specifically, the created site:
+Following is the markdown guide to help you contribute to the ISV Playbook:
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
 
-To get started with creating a site, simply:
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+# ISV Playbook on GitHub Pages
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](#hosting-your-docs-from-an-existing-project-repo).
+This repository contains the source code for the ISV Playbook on GitHub Pages. The ISV Playbook is a guide for ISV partners to help them onboard to the Microsoft Partner Network (MPN) and build a successful business with help of the Microsoft ISV Team.
 
-After completing the creation of your new site on GitHub, update it as needed:
+The repository is built using Just the Docs theme powered by [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages.
 
-## Replace the content of the template pages
+Following is the markdown guide to help you contribute to the ISV Playbook:
 
-Update the following files to your own content:
 
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
 
-## Changing the version of the theme and/or Jekyll
+---
+layout: default
+title: Typography
+parent: UI Components
+nav_order: 1
+---
 
-Simply edit the relevant line(s) in the `Gemfile`.
+# Typography
+{: .no_toc }
 
-## Adding a plugin
+## Table of contents
+{: .no_toc .text-delta }
 
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
+1. TOC
+{:toc}
 
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
+---
 
-- Add the following to your site's `Gemfile`:
+## Font stack
 
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
+By default, Just the Docs uses a native system font stack for sans-serif fonts:
 
-- And add the following to your site's `_config.yml`:
+```scss
+system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Segoe UI Emoji"
+```
 
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+{: .fs-5 .ls-10 .code-example }
 
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
+For monospace type, like code snippets or the `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
 
-## Publishing your site on GitHub Pages
+```scss
+"SFMono-Regular", Menlo, Consolas, Monospace
+```
 
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+{: .fs-5 .ls-10 .text-mono .code-example }
 
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
+---
 
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+## Responsive type scale
 
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
+Just the Docs uses a responsive type scale that shifts depending on the viewport size.
 
-2.  Push your updated `_config.yml` to your site on GitHub.
+| Selector              | Small screen size `font-size`    | Large screen size `font-size` |
+|:----------------------|:---------------------------------|:------------------------------|
+| `h1`, `.text-alpha`   | 32px                             | 36px                          |
+| `h2`, `.text-beta`    | 18px                             | 24px                          |
+| `h3`, `.text-gamma`   | 16px                             | 18px                          |
+| `h4`, `.text-delta`   | 14px                             | 16px                          |
+| `h5`, `.text-epsilon` | 16px                             | 18px                          |
+| `h6`, `.text-zeta`    | 18px                             | 24px                          |
+| `body`                | 14px                             | 16px                          |
 
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+---
 
-## Building and previewing your site locally
+## Headings
 
-Assuming [Jekyll] and [Bundler] are installed on your computer:
+Headings are rendered like this:
 
-1.  Change your working directory to the root directory of your site.
+<div class="code-example">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+</div>
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
 
-2.  Run `bundle install`.
+---
 
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+## Body text
 
-    The built site is stored in the directory `_site`.
+Default body text is rendered like this:
 
-## Publishing your built site on a different platform
+<div class="code-example" markdown="1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+```markdown
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
 
-Just upload all the files in the directory `_site`.
+---
 
-## Customization
+## Inline elements
 
-You're free to customize sites that you create with this template, however you like!
+<div class="code-example" markdown="1">
+Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+[Link to another page]({{site.baseurl}}/).
+</div>
+```markdown
+Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-## Hosting your docs from an existing project repo
+[Link to another page]({{site.baseurl}}/).
+```
 
-You might want to maintain your docs in an existing project repo. Instead of creating a new repo using the [just-the-docs template](https://github.com/just-the-docs/just-the-docs-template), you can copy the template files into your existing repo and configure the template's Github Actions workflow to build from a `docs` directory. You can clone the template to your local machine or download the `.zip` file to access the files.
+---
 
-### Copy the template files
+## Typographic Utilities
 
-1.  Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
+There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.
 
-2.  Create a `docs` directory at your project root and copy all remaining template files into this directory.
-
-### Modify the GitHub Actions workflow
-
-The GitHub Actions workflow that builds and deploys your site to Github Pages is defined by the `pages.yml` file. You'll need to edit this file to that so that your build and deploy steps look to your `docs` directory, rather than the project root.
-
-1.  Set the default `working-directory` param for the build job.
-
-    ```yaml
-    build:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: docs
-    ```
-
-2.  Set the `working-directory` param for the Setup Ruby step.
-
-    ```yaml
-    - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-          cache-version: 0
-          working-directory: '${{ github.workspace }}/docs'
-    ```
-
-3.  Set the path param for the Upload artifact step:
-
-    ```yaml
-    - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "docs/_site/"
-    ```
-
-4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
-
-    ```yaml
-    on:
-      push:
-        branches:
-          - "main"
-        paths:
-          - "docs/**"
-    ```
-
-## Licensing and Attribution
-
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
-
-The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Jekyll]: https://jekyllrb.com
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
-[MIT License]: https://en.wikipedia.org/wiki/MIT_License
-[starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
-[actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
+[View typography utilities]({% link docs/utilities/typography.md %}){: .btn .btn-outline }
