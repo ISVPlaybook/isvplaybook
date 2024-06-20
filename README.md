@@ -14,67 +14,15 @@ This repository contains the source code for the ISV Playbook on GitHub Pages. T
 
 The repository is built using Just the Docs theme powered by [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages.
 
-Following is the markdown guide to help you contribute to the ISV Playbook:
+Following is the guidance to help you contribute to the ISV Playbook:
 
+1. Page organization and navigation: 
+    - The ISV Playbook is organized into sections and articles. Each section is a folder in the `_docs` directory and each article is a markdown file in the respective section folder.
+    - The navigation is automatically generated based on the folder structure and the front matter of the markdown files. 
+    - To add a new section, create a new folder in the `_docs` directory and add a markdown file with the same name as the folder. 
+    - To add a new article, create a new markdown file in the respective section folder. 
+    - To change the order of sections or articles, update the `nav_order` in the front matter of the markdown file.
 
-
----
-layout: default
-title: Typography
-parent: UI Components
-nav_order: 1
----
-
-# Typography
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
-## Font stack
-
-By default, Just the Docs uses a native system font stack for sans-serif fonts:
-
-```scss
-system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Segoe UI Emoji"
-```
-
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-{: .fs-5 .ls-10 .code-example }
-
-For monospace type, like code snippets or the `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
-
-```scss
-"SFMono-Regular", Menlo, Consolas, Monospace
-```
-
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-{: .fs-5 .ls-10 .text-mono .code-example }
-
----
-
-## Responsive type scale
-
-Just the Docs uses a responsive type scale that shifts depending on the viewport size.
-
-| Selector              | Small screen size `font-size`    | Large screen size `font-size` |
-|:----------------------|:---------------------------------|:------------------------------|
-| `h1`, `.text-alpha`   | 32px                             | 36px                          |
-| `h2`, `.text-beta`    | 18px                             | 24px                          |
-| `h3`, `.text-gamma`   | 16px                             | 18px                          |
-| `h4`, `.text-delta`   | 14px                             | 16px                          |
-| `h5`, `.text-epsilon` | 16px                             | 18px                          |
-| `h6`, `.text-zeta`    | 18px                             | 24px                          |
-| `body`                | 14px                             | 16px                          |
-
----
 
 ## Headings
 
