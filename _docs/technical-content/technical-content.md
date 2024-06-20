@@ -6,7 +6,7 @@ has_children: true
 permalink: /docs/technical-content
 ---
 
-# Technical Content Overview
+# Technical Content
 
 ```
 Some code #2

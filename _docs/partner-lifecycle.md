@@ -5,5 +5,4 @@ nav_order: 1
 has_children: true
 ---
 
-# Partner Lifecycle Overview
-
+# Partner Lifecycle

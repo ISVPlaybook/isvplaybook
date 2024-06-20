@@ -6,7 +6,7 @@ has_children: true
 permalink: /docs/go-to-market
 ---
 
-# Go-to-market Overview
+# Go-to-market 
 
 ```
 Some code #2
