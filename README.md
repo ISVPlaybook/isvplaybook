@@ -30,13 +30,42 @@ Following is the guidance to help you contribute to the ISV Playbook:
     layout: default
     title: Article 1
     nav_order: 1
+    has_children: true
     parent: Section 1
     permalink: /docs/section-1/article-1
     ---
     ```
 - The `permalink` field is optional. If not provided, the permalink is generated based on the folder structure and the file name.
+- The `has_children` field is used to indicate if the page has child pages. If set to true, the page will be displayed as a section in the navigation with a dropdown menu of child pages.
+- The `parent` and `has_children` field are mutually exclusive. If `parent` is provided, `has_children` should not be provided.
 
-Absence of front matter will result in the HTML page not being generated during the build.
+Example for a section with child pages:
+```markdown
+---
+layout: default
+title: Partner Programs
+nav_order: 3
+has_children: true
+permalink: /docs/partner-programs
+---
+```
+
+Example for an article with a parent section:
+```markdown
+---
+layout: default
+title: Article 1
+nav_order: 1
+parent: Partner Programs
+permalink: /docs/partner-program/article-1
+---
+```
+
+The combination of above front matter will result in the following navigation structure:
+- Partner Programs
+    - Article 1
+
+Note: Absence of front matter will result in the HTML page not being generated during the build.
 
 ## Code snippets:
 
@@ -50,6 +79,16 @@ Absence of front matter will result in the HTML page not being generated during 
     ```
 ```
 
+To add a code snippet with syntax highlighting, please add the programming language identifier after the first set of triple backticks. For example, to add a code snippet in Python, use the following syntax:
+```markdown
+```python
+```
+```python
+    ```
+    print("Hello, World!")
+    ```
+```
+
 ## Buttons:
 
 - To add a button to a markdown file, use the following syntax:
@@ -59,14 +98,7 @@ Absence of front matter will result in the HTML page not being generated during 
 
 ## Headings
 
-Headings are rendered like this:
-
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+Headings can be added using the following syntax:
 
 ```
 # Heading 1
@@ -77,12 +109,15 @@ Headings are rendered like this:
 ###### Heading 6
 ```
 
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
 ## Inline elements
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](https://isvplaybook.github.io/isvplaybook/).
-
 
 ```
 Text can be **bold**, _italic_, or ~~strikethrough~~.
@@ -90,46 +125,77 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 [Link to another page](https://isvplaybook.github.io/isvplaybook/).
 
 ```
+
+Text can be **bold**, _italic_, or ~~strikethrough~~.
+
+[Link to another page](https://isvplaybook.github.io/isvplaybook/).
+
 
 ## Lists
 
 Add unordered list by adding line with a * or - at the start of the line.
 
+```
 - Item 1
 - Item 2
 - Item 3
+```
 
-```
 - Item 1
 - Item 2
 - Item 3
-```
 
 To add ordered list, add line with a number at the start of the line.
 
+```
 1. Item 1
 2. Item 2
 3. Item 3
+```
 
-```
 1. Item 1
 2. Item 2
 3. Item 3
-```
 
 Please note that the numbers in your markdown file do not need to be in order. The list will be automatically numbered in the rendered page.
 
 To add a task list in a tutorial, use the following syntax:
-
-- [x] Task 1
-- [ ] Task 2
-- [ ] Task 3
 
 ```markdown
 - [x] Task 1
 - [ ] Task 2
 - [ ] Task 3
 ```
+
+- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3
+
+## Blockquotes
+
+To add a blockquote, use the following syntax:
+
+```markdown
+> This is a blockquote.
+```
+
+> This is a blockquote.
+
+## Tables
+
+To add a table, use the following syntax:
+
+```markdown
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Row 1, Col 1 | Row 1, Col 2 |
+| Row 2, Col 1 | Row 2, Col 2 |
+```
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Row 1, Col 1 | Row 1, Col 2 |
+| Row 2, Col 1 | Row 2, Col 2 |
 
 ## Images
 
@@ -143,17 +209,6 @@ To add an image, use the following syntax:
 
 The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
 
-<details markdown="block">
-<summary>Shopping list (click me!)</summary>
-
-This is content inside a `<details>` dropdown.
-
-- [ ] Apples
-- [ ] Oranges
-- [ ] Milk
-
-</details>
-
 ```
 <details markdown="block">
 <summary>Shopping list (click me!)</summary>
@@ -166,3 +221,14 @@ This is content inside a `<details>` dropdown.
 
 </details>
 ```
+
+<details markdown="block">
+<summary>Shopping list (click me!)</summary>
+
+This is content inside a `<details>` dropdown.
+
+- [ ] Apples
+- [ ] Oranges
+- [ ] Milk
+
+</details>
