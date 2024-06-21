@@ -34,6 +34,9 @@ Following is the guidance to help you contribute to the ISV Playbook:
     permalink: /docs/section-1/article-1
     ---
     ```
+- The `permalink` field is optional. If not provided, the permalink is generated based on the folder structure and the file name.
+
+Absence of front matter will result in the HTML page not being generated during the build.
 
 ## Code snippets:
 
@@ -86,4 +89,80 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](https://isvplaybook.github.io/isvplaybook/).
 
+```
+
+## Lists
+
+Add unordered list by adding line with a * or - at the start of the line.
+
+- Item 1
+- Item 2
+- Item 3
+
+```
+- Item 1
+- Item 2
+- Item 3
+```
+
+To add ordered list, add line with a number at the start of the line.
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+```
+1. Item 1
+2. Item 2
+3. Item 3
+```
+
+Please note that the numbers in your markdown file do not need to be in order. The list will be automatically numbered in the rendered page.
+
+To add a task list in a tutorial, use the following syntax:
+
+- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3
+
+```markdown
+- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3
+```
+
+## Images
+
+To add an image, use the following syntax:
+
+```markdown
+![Image description](/path/to/image.jpg)
+```
+
+### Collapsed Section
+
+The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
+
+<details markdown="block">
+<summary>Shopping list (click me!)</summary>
+
+This is content inside a `<details>` dropdown.
+
+- [ ] Apples
+- [ ] Oranges
+- [ ] Milk
+
+</details>
+
+```
+<details markdown="block">
+<summary>Shopping list (click me!)</summary>
+
+This is content inside a `<details>` dropdown.
+
+- [ ] Apples
+- [ ] Oranges
+- [ ] Milk
+
+</details>
 ```
