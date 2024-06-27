@@ -10,6 +10,14 @@ permalink: /docs/partneronboarding/mpn-signup/
 
 This section contains information about signing up for the Microsoft Partner Network (MPN).
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 ## Prerequisites
 
 To sign up for the Microsoft Partner Network (MPN), you need the following:
