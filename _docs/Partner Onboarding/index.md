@@ -7,12 +7,17 @@ permalink: /docs/partneronboarding/
 ---
 
 # Partner Onboarding
+{: .no_toc }
 
 This section contains information about the onboarding process for partners.
 
-## Table of Contents
+## Table of contents
+{: .no_toc .text-delta }
 
+1. TOC
 {:toc}
+
+---
 
 ## Overview
 
