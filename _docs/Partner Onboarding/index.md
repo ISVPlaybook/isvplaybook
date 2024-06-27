@@ -12,7 +12,7 @@ This section contains information about the onboarding process for partners.
 
 ## Table of Contents
 
-{% include toc.html %}
+{:toc}
 
 ## Overview
 
