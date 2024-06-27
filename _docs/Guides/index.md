@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guides
-nav_order: 1
+nav_order: 5
 has_children: true
 permalink: /docs/guides/
 ---
