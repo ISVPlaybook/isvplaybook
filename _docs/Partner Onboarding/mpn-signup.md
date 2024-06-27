@@ -7,6 +7,7 @@ permalink: /docs/partneronboarding/mpn-signup/
 ---
 
 # Signing up for Microsoft Partner Network (MPN)
+{: .no_toc }
 
 This section contains information about signing up for the Microsoft Partner Network (MPN).
 
